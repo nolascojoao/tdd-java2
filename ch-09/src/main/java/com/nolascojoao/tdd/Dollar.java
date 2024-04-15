@@ -1,17 +1,15 @@
 package com.nolascojoao.tdd;
 
 public class Dollar extends Money {
-	
-	public Dollar(int amount) {
-		this.amount = amount;
+
+	private String currency;
+
+	public Dollar(int amount, String currency) {
+		super(amount, currency);
 	}
 
 	public Money times(int multiplier) {
-		return new Dollar(amount * multiplier);
-	}
-	
-	public String currency() {
-		return "USD";
+		return Money.dollar(amount * multiplier);
 	}
 
 }

@@ -2,16 +2,14 @@ package com.nolascojoao.tdd;
 
 public class Franc extends Money {
 
-	public Franc(int amount) {
-		this.amount = amount;
+	private String currency;
+
+	public Franc(int amount, String currency) {
+		super(amount, currency);
 	}
 
 	public Money times(int multiplier) {
-		return new Franc(amount * multiplier);
-	}
-	
-	public String currency() {
-		return "CHF";
+		return Money.franc(amount * multiplier);
 	}
 
 }
