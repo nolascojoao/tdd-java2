@@ -15,6 +15,8 @@ public abstract class Money {
 	}
 
 	public abstract Money times(int multiplier);
+	
+	public abstract String currency();
 
 	@Override
 	public int hashCode() {
